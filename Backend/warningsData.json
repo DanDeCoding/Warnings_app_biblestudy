@@ -1,0 +1,28 @@
+{
+  "jamy|Year 7 and 8A": {
+    "name": "jamy",
+    "yearGroup": "Year 7 and 8A",
+    "warnings": [
+      "Using Mobile Phone",
+      "Disrespecting the Church",
+      "ya know bad"
+    ],
+    "outUntil": "2024-02-22T00:53:11.784Z"
+  },
+  "daniel a|Year 7 and 8A": {
+    "name": "Daniel A",
+    "yearGroup": "Year 7 and 8A",
+    "warnings": [
+      "Disrespecting the Church"
+    ],
+    "outUntil": null
+  },
+  "daniel a|Year 3 and 4B": {
+    "name": "Daniel A",
+    "yearGroup": "Year 3 and 4B",
+    "warnings": [
+      "Using Inappropriate Language"
+    ],
+    "outUntil": null
+  }
+}

@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children Warnings Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Children Warnings Tracker</h1>
+    <form id="warningForm">
+        <div>
+            <label for="childName">Child's Name:</label>
+            <input type="text" id="childName" required>
+        </div>
+        <div>
+            <label for="yearGroup">Year Group:</label>
+            <select id="yearGroup" required>
+                <!-- Year group options -->
+                <option value="">Year required</option>
+                <option value="Year 3 and 4A">Year 3 and 4A</option>
+                <option value="Year 3 and 4B">Year 3 and 4B</option>
+                <option value="Year 5 and 6A">Year 5 and 6A</option>
+                <option value="Year 5 and 6B">Year 5 and 6B</option>
+                <option value="Year 7 and 8A">Year 7 and 8A</option>
+                <option value="Year 7 and 8B">Year 7 and 8B</option>
+                <option value="Year 9 and 10A">Year 9 and 10A</option>
+                <option value="Year 9 and 10B">Year 9 and 10B</option>
+            </select>
+        </div>
+        <div>
+            <label for="warningReason">Reason for Warning:</label>
+            <select id="warningReason" required onchange="toggleOtherReasonField()">
+                <!-- Reason options -->
+                <option value="">Reason For Warning</option>
+                <option value="Using Inappropriate Language">Using Inappropriate Language</option>
+                <option value="Bullying">Bullying</option>
+                <option value="Disrespecting the Church">Disrespecting the Church</option>
+                <option value="Disturbing Bible Study Lesson">Disturbing Bible Study Lesson</option>
+                <option value="Using Mobile Phone">Using Mobile Phone</option>
+                <option value="Going to an Unsupervised Area">Going to an Unsupervised Area</option>
+                <option value="Other">Other (Specify Below)</option>
+            </select>
+        </div>
+        <div id="otherReason" style="display:none;">
+            <label for="otherText">Other Reason:</label>
+            <input type="text" id="otherText">
+        </div>
+        <button type="submit">Add Warning</button>
+    </form>
+    <h2>Warnings List</h2>
+    <div id="warningsDisplay"></div>
+
+    <!-- Load Socket.IO client -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- Your custom script -->
+    <script src="script.js"></script>
+</body>
+</html>
